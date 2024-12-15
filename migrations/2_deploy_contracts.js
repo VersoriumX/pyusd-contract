@@ -7,6 +7,6 @@ module.exports = async function(deployer) {
   await deployer.deploy(PYUSD);
   const proxy = await deployer.deploy(Proxy, PYUSD.address);
   const proxiedPYUSD = await PYUSD.at(proxy.address);
-  await proxy.changeAdmin("0xf0b1eef88956b0a307fa87b5f5671aad6a5d330f");
+  await proxy.changeAdmin("0x591C13850C672c5713A8774E34DDe8777BA72Ef4");
   await proxiedPYUSD.initialize();
 };
